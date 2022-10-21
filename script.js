@@ -47,7 +47,7 @@ function makeGopher() {
 function gameStart() {
   const gameItl = setInterval(() => {
     makeGopher();
-  }, 300);
+  }, 400);
   const timeItl = setInterval(() => {
     time--;
     timeLeftEl.innerText = `Time Left:${time}s`;
