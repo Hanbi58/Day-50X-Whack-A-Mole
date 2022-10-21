@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+
+  margin: 0;
+
+  height: 100vh;
+  overflow: hidden;
+  background: center/cover
+    url("https://img.freepik.com/premium-vector/ground-seamless-pattern_172107-1588.jpg?w=2000");
+}
+
+.back-drop {
+  background-color: rgba(0, 0, 0, 0.815);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.modal h1 {
+  font-size: 5rem;
+  letter-spacing: 0.2rem;
+}
+.start {
+  background-color: rgb(255, 200, 0);
+  padding: 1rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: black;
+  border: none;
+  border-radius: 0.5rem;
+  width: 15rem;
+  cursor: pointer;
+}
+
+.start:hover {
+  background-color: rgb(255, 211, 53);
+  scale: 1.02;
+  transition: all 0.2s ease-out;
+}
+
+.start:active {
+  scale: 0.95;
+  transition: all 0.1s ease-out;
+}
+
+.hid {
+  display: none;
+}
+
+.game {
+  height: 90vh;
+  width: 95vw;
+  margin: auto;
+  margin-top: 5vh;
+  position: relative;
+}
+
+.game .board {
+  display: flex;
+  width: 350px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  position: absolute;
+  padding: 0.5rem 0.5rem;
+  height: 2rem;
+  top: -4vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0 auto;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  letter-spacing: 0.1rem;
+  border-radius: 0.5rem;
+}
+
+.gopher {
+  position: absolute;
+  display: block;
+  height: 200px;
+  width: 200px;
+  background: center/contain no-repeat url("./Assets/G1.png");
+}
+
+.gopher.disappear {
+  transform: rotateZ(720deg);
+  scale: 0;
+  transition: all 0.3s ease-out;
+}
